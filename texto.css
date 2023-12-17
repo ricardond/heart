@@ -1,0 +1,58 @@
+.text-animado{
+    font-size: 45px;
+    font-weight: 300;
+    color: aliceblue;
+}
+
+.text-animado span{
+    position: relative;
+}
+
+.text-animado span::before{
+    content: "";
+    color: rgb(255, 129, 150);;
+    animation: frases 20s infinite;
+}
+
+.text-animado span::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid rgb(255, 129, 150);
+    right: -10px;
+    animation: cursor .5s infinite, digita 20s steps(15) infinite;
+    width: calc(100% + 15px);
+    background-color: black;
+}
+
+@keyframes digita{
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+    width: calc(100% + 15px);
+    }
+}
+@keyframes cursor{
+    0%{
+        border-left: black;
+    }
+}
+
+@keyframes frases{
+    0%,20%{
+        content: "Dev";
+    }
+    21%,40%{
+        content: "Dedicada";
+    }
+    41%,60%{
+        content: "Doramera";
+    }
+    61%,80%{
+        content: "Linda";
+    }
+    81%,100%{
+        content: "Perfeita";
+    }
+}
