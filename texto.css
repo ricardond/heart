@@ -41,16 +41,16 @@
 
 @keyframes frases{
     0%,20%{
-        content: "Dev";
+        content: "Inteligente";
     }
     21%,40%{
-        content: "Dedicada";
+        content: "Linda";
     }
     41%,60%{
         content: "Dorameira";
     }
     61%,80%{
-        content: "Linda";
+        content: "Dev";
     }
     81%,100%{
         content: "Perfeita";
